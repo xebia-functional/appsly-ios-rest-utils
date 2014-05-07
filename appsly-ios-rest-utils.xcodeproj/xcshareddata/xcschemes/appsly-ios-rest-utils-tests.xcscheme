@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES"
+            buildForTesting = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1B50A226E5F04DA4C9BF1E24"
+               BuildableName = "appsly-ios-rest-utilsTests.xctest"
+               BlueprintName = "appsly-ios-rest-utilsTests"
+               ReferencedContainer = "container:appsly-ios-rest-utils.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug">
+      <Testables>
+         <TestableReference>
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1B50A226E5F04DA4C9BF1E24"
+               BuildableName = "appsly-ios-rest-utilsTests.xctest"
+               BlueprintName = "appsly-ios-rest-utilsTests"
+               ReferencedContainer = "container:appsly-ios-rest-utils.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "NO">
+   </LaunchAction>
+</Scheme>
