@@ -1,8 +1,3 @@
-Appsly iOS REST Utils
-=====================
-
-A Collection of RestKit and HTTP Related Utils
-
 [![Build Status](https://clinker.47deg.com/desktop/plugin/public/status/appsly-ios-rest-utils.png?branch=master)](https://clinker.47deg.com/jenkins/view/Appsly/job/appsly-ios-rest-utils/)
 # Appsly iOS REST Utils
 
