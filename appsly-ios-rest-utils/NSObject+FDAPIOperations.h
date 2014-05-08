@@ -25,6 +25,7 @@
 @protocol FDRKRequestMappingProvider;
 @protocol FDRKResponseMappingProvider;
 @class RKObjectRequestOperation;
+@class RKMappingResult;
 
 @interface NSObject (FDAPIOperations)
 

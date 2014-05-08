@@ -27,12 +27,12 @@
 		1B50A8741947FC1038424BF1 /* NSObject+FDAPIOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B50A50FCAB33C6D211B6C09 /* NSObject+FDAPIOperations.m */; };
 		1B50A935D028FB1F1469DE45 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B50AE1746357741B60424C4 /* InfoPlist.strings */; };
 		1B50A9ED09CD557A29245385 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B50A3C00FC9D354C72A8418 /* UIKit.framework */; };
-		1B50AAC28061F8417483D0DC /* appsly_ios_rest_utilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B50AE28826B647997481317 /* appsly_ios_rest_utilsTests.m */; };
+		1B50AAC28061F8417483D0DC /* APPRESTUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B50AE28826B647997481317 /* APPRESTUtilsTests.m */; };
 		1B50ABBAF195F7F54CB62ABA /* APPCacheConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B50A23E1898B4FB492E73E0 /* APPCacheConfig.m */; };
 		1B50AC7B8BB48868105D3865 /* APPEphemeralCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B50A18C40A57FF076EDC5EF /* APPEphemeralCacheManager.m */; };
 		1B50ACBDFF10E73E78F42195 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B50A0650248F6735344A638 /* Images.xcassets */; };
 		1B50ADD5EF0EC98B96FE0BFB /* FDAPIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B50A83E2698330C4AA5C2DB /* FDAPIResponse.m */; };
-		1B50AE89DF7E59192E56D483 /* appsly-ios-rest-utils.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 1B50AADEB996DB30E4EF6689 /* appsly-ios-rest-utils.podspec */; };
+		97F5B689191BDD0B00221B18 /* libPods-appsly-ios-rest-utilsTests-Kiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F5B688191BDD0B00221B18 /* libPods-appsly-ios-rest-utilsTests-Kiwi.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +76,6 @@
 		1B50A9E1A50199500C85CD09 /* FDRKUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDRKUtils.h; sourceTree = "<group>"; };
 		1B50AA02E93A940F1B9F8669 /* APPCacheContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPCacheContainer.m; sourceTree = "<group>"; };
 		1B50AA5AC96F2BA7B035A019 /* NSObject+FDRestkitMappings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+FDRestkitMappings.h"; sourceTree = "<group>"; };
-		1B50AADEB996DB30E4EF6689 /* appsly-ios-rest-utils.podspec */ = {isa = PBXFileReference; lastKnownFileType = file.podspec; path = "appsly-ios-rest-utils.podspec"; sourceTree = "<group>"; };
 		1B50AADF2B3F5792145E3A26 /* appsly-ios-rest-utilsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "appsly-ios-rest-utilsTests-Info.plist"; sourceTree = "<group>"; };
 		1B50AAF61D40C7E4CEC85D09 /* appsly-ios-rest-utilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "appsly-ios-rest-utilsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B50AB09F831B58A4FECCE63 /* appsly-ios-rest-utils-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "appsly-ios-rest-utils-Prefix.pch"; sourceTree = "<group>"; };
@@ -87,8 +86,13 @@
 		1B50AB9D82343AC894852CC3 /* APPPersistentCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPPersistentCacheManager.h; sourceTree = "<group>"; };
 		1B50AD84DD860D61C85520B0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		1B50AD8E2149CCAFF97946C3 /* appsly-ios-rest-utils-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "appsly-ios-rest-utils-Info.plist"; sourceTree = "<group>"; };
-		1B50AE28826B647997481317 /* appsly_ios_rest_utilsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = appsly_ios_rest_utilsTests.m; sourceTree = "<group>"; };
+		1B50AE28826B647997481317 /* APPRESTUtilsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APPRESTUtilsTests.m; sourceTree = "<group>"; };
 		1B50AE29D882A324D00265AB /* appsly-ios-rest-utils-Info copy.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = "appsly-ios-rest-utils-Info copy.plist"; sourceTree = "<group>"; };
+		97F5B684191BDCE100221B18 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		97F5B686191BDD0300221B18 /* libPods-appsly-ios-rest-utilsTests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-appsly-ios-rest-utilsTests.a"; path = "Pods/build/Debug-iphoneos/libPods-appsly-ios-rest-utilsTests.a"; sourceTree = "<group>"; };
+		97F5B688191BDD0B00221B18 /* libPods-appsly-ios-rest-utilsTests-Kiwi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-appsly-ios-rest-utilsTests-Kiwi.a"; path = "Pods/build/Debug-iphoneos/libPods-appsly-ios-rest-utilsTests-Kiwi.a"; sourceTree = "<group>"; };
+		A005A57E62AF40AB999DDE76 /* Pods-appsly-ios-rest-utilsTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appsly-ios-rest-utilsTests.xcconfig"; path = "Pods/Pods-appsly-ios-rest-utilsTests.xcconfig"; sourceTree = "<group>"; };
+		AAF79A27067F4F1F98842974 /* libPods-appsly-ios-rest-utilsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-appsly-ios-rest-utilsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD31BF1B5EAA4FE887B0623A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		EC5442AC9B464B6B8AD90660 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97F5B689191BDD0B00221B18 /* libPods-appsly-ios-rest-utilsTests-Kiwi.a in Frameworks */,
 				1B50A50FC61407ABE210D8CD /* XCTest.framework in Frameworks */,
 				1B50A5C204F1BB1510AAE2B6 /* Foundation.framework in Frameworks */,
 				1B50A9ED09CD557A29245385 /* UIKit.framework in Frameworks */,
@@ -186,7 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				1B50A8119FA2BD9AC5529B19 /* Supporting Files */,
-				1B50AE28826B647997481317 /* appsly_ios_rest_utilsTests.m */,
+				1B50AE28826B647997481317 /* APPRESTUtilsTests.m */,
 			);
 			path = "appsly-ios-rest-utilsTests";
 			sourceTree = "<group>";
@@ -198,21 +203,25 @@
 				1B50AE1749CB8CE0EABA9EC0 /* Frameworks */,
 				1B50A488724D34A785324C6E /* appsly-ios-rest-utils */,
 				1B50A904598C891020F61E9D /* appsly-ios-rest-utilsTests */,
-				1B50AADEB996DB30E4EF6689 /* appsly-ios-rest-utils.podspec */,
 				1B50AD84DD860D61C85520B0 /* Podfile */,
 				CD31BF1B5EAA4FE887B0623A /* Pods.xcconfig */,
 				1B50A55337B9D3A385CDABAC /* .gitignore */,
+				A005A57E62AF40AB999DDE76 /* Pods-appsly-ios-rest-utilsTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
 		1B50AE1749CB8CE0EABA9EC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				97F5B688191BDD0B00221B18 /* libPods-appsly-ios-rest-utilsTests-Kiwi.a */,
+				97F5B686191BDD0300221B18 /* libPods-appsly-ios-rest-utilsTests.a */,
+				97F5B684191BDCE100221B18 /* libPods.a */,
 				1B50A89D1D9157DCBB0723C5 /* Foundation.framework */,
 				1B50A0702DAF0C9F0ABC96DD /* CoreGraphics.framework */,
 				1B50A3C00FC9D354C72A8418 /* UIKit.framework */,
 				1B50A98EB5A0D2371B4AE5B8 /* XCTest.framework */,
 				EC5442AC9B464B6B8AD90660 /* libPods.a */,
+				AAF79A27067F4F1F98842974 /* libPods-appsly-ios-rest-utilsTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -224,9 +233,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1B50A369C6711C70979160DE /* Build configuration list for PBXNativeTarget "appsly-ios-rest-utilsTests" */;
 			buildPhases = (
+				6947C87638604A3BBB1D555E /* Check Pods Manifest.lock */,
 				1B50A8869964FF8F8E0A2ADA /* Sources */,
 				1B50A8C066DABF6344BFDBC1 /* Frameworks */,
 				1B50AD7CBD893D7D5A2922BB /* Resources */,
+				B07B0945F47F4C139C6DC6C4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,6 +275,11 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = "47 Degrees";
+				TargetAttributes = {
+					1B50A226E5F04DA4C9BF1E24 = {
+						TestTargetID = 1B50A24BFFCA528086561DFE;
+					};
+				};
 			};
 			buildConfigurationList = 1B50A9EC0B6BBE9963C1D495 /* Build configuration list for PBXProject "appsly-ios-rest-utils" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -275,8 +291,6 @@
 			mainGroup = 1B50AA15667B5C8BF424CEC9;
 			productRefGroup = 1B50A0D92A49CEA32713F5F1 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				1B50A24BFFCA528086561DFE /* appsly-ios-rest-utils */,
@@ -293,7 +307,6 @@
 				1B50A935D028FB1F1469DE45 /* InfoPlist.strings in Resources */,
 				1B50ACBDFF10E73E78F42195 /* Images.xcassets in Resources */,
 				1B50A211296AABFB4C0135D8 /* appsly-ios-rest-utils-Info copy.plist in Resources */,
-				1B50AE89DF7E59192E56D483 /* appsly-ios-rest-utils.podspec in Resources */,
 				1B50A1C09268D8BA1F4A521A /* Podfile in Resources */,
 				1B50A6D982FF6A84180E2984 /* .gitignore in Resources */,
 			);
@@ -310,6 +323,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		6947C87638604A3BBB1D555E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		8210EC2A7CFC4B63B67E09D0 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -323,6 +351,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B07B0945F47F4C139C6DC6C4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-appsly-ios-rest-utilsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD964A403D8949C8BCCC1B4F /* Check Pods Manifest.lock */ = {
@@ -365,7 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B50AAC28061F8417483D0DC /* appsly_ios_rest_utilsTests.m in Sources */,
+				1B50AAC28061F8417483D0DC /* APPRESTUtilsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,7 +477,9 @@
 		};
 		1B50A2AB3BFEBA2B86223318 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A005A57E62AF40AB999DDE76 /* Pods-appsly-ios-rest-utilsTests.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/appsly-ios-rest-utils.app/appsly-ios-rest-utils";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -442,7 +487,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "appsly-ios-rest-utils/appsly-ios-rest-utils-Prefix.pch";
 				INFOPLIST_FILE = "appsly-ios-rest-utilsTests/appsly-ios-rest-utilsTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -477,7 +528,9 @@
 		};
 		1B50AB8813380994C7962F80 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A005A57E62AF40AB999DDE76 /* Pods-appsly-ios-rest-utilsTests.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/appsly-ios-rest-utils.app/appsly-ios-rest-utils";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -485,7 +538,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "appsly-ios-rest-utils/appsly-ios-rest-utils-Prefix.pch";
 				INFOPLIST_FILE = "appsly-ios-rest-utilsTests/appsly-ios-rest-utilsTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -539,6 +598,7 @@
 				1B50A2AB3BFEBA2B86223318 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B50A9EC0B6BBE9963C1D495 /* Build configuration list for PBXProject "appsly-ios-rest-utils" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +616,7 @@
 				1B50AB7F8F4F53E7F57B8D98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

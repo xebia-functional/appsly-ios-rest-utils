@@ -20,6 +20,7 @@
 #import "RKObjectMapping.h"
 #import "FDRKResponseMappingProvider.h"
 
+#pragma mark - CamelCase Macro
 
 #define RKSimpleAutoResponseMappings() \
 - (RKObjectMapping *)remoteMapping { \
@@ -42,22 +43,24 @@
     return [self remoteMappingForPropertyAndRelations:[__p objectForKey:@"properties"] relations:[__p objectForKey:@"associations"]]; \
 }
 
+#pragma mark - Pascal Macro
+
 #define RKSimpleAutoResponsePascalMappings() \
 - (RKObjectMapping *)remoteMapping { \
     return [self remoteMappingWithSimplePascalProperties]; \
 }
 
+#pragma mark - Underscored Macro
+
+#define RKSimpleAutoResponseUnderscoredMappings() \
+- (RKObjectMapping *)remoteMapping { \
+    return [self remoteMappingWithSimpleUnderscoredProperties]; \
+}
 
 
 @interface NSObject (FDRestkitMappings)
 
-- (NSDictionary *)pascalToPropertiesDictionary;
-
-- (NSDictionary *)pascalFromPropertiesDictionary;
-
-- (NSString *)pascalCasePropertyName:(NSString *)propertyName;
-
-- (NSArray *)pascalCasePropertyNames;
+#pragma mark - CamelCase
 
 - (NSArray *)propertyNames;
 
@@ -73,10 +76,6 @@
 
 - (RKObjectMapping *)remoteMappingWithSimpleProperties;
 
-- (RKObjectMapping *)remoteMappingWithSimplePascalProperties;
-
-- (RKObjectMapping *)remoteMappingWithSimplePascalPropertiesExcluding:(NSArray *)props;
-
 - (RKObjectMapping *)requestMappingWithSimplePropertiesExcluding:(NSArray *)props;
 
 - (RKObjectMapping *)remoteMappingWithSimplePropertiesExcluding:(NSArray *)props;
@@ -86,4 +85,29 @@
 - (RKObjectMapping *)remoteMappingExcludingProperties:(NSArray *)excluded;
 
 - (RKObjectMapping *)remoteMappingWithSimplePropertiesAndRelationships:(NSDictionary *)r;
+
+#pragma mark - Pascal
+
+- (NSDictionary *)pascalToPropertiesDictionary;
+
+- (NSDictionary *)pascalFromPropertiesDictionary;
+
+- (NSString *)pascalCasePropertyName:(NSString *)propertyName;
+
+- (NSString *)underscoredPropertyName:(NSString *)propertyName;
+
+- (NSArray *)pascalCasePropertyNames;
+
+- (RKObjectMapping *)remoteMappingWithSimplePascalProperties;
+
+- (RKObjectMapping *)remoteMappingWithSimplePascalPropertiesExcluding:(NSArray *)props;
+
+#pragma mark - Underscored
+
+- (RKObjectMapping *)remoteMappingWithSimpleUnderscoredProperties;
+
+- (RKObjectMapping *)remoteMappingWithSimpleUnderscoredPropertiesExcluding:(NSArray *)props;
+
+
+
 @end

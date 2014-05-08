@@ -27,6 +27,10 @@
     return [NSDictionary dictionaryWithObjects:[self propertyNames] forKeys:[self pascalCasePropertyNames]];
 }
 
+- (NSDictionary *) underscoredToPropertiesDictionary {
+    return [NSDictionary dictionaryWithObjects:[self propertyNames] forKeys:[self underscoredPropertyNames]];
+}
+
 - (NSDictionary *) pascalFromPropertiesDictionary {
     return [NSDictionary dictionaryWithObjects:[self pascalCasePropertyNames] forKeys:[self propertyNames]];
 }
@@ -36,10 +40,34 @@
                                           withString:[[propertyName substringToIndex:1] capitalizedString]];
 }
 
+- (NSString *)underscoredPropertyName:(NSString *)propertyName {
+    NSArray *components = [propertyName componentsSeparatedByString:@"_"];
+    NSMutableString *output = [NSMutableString string];
+
+    for (NSUInteger i = 0; i < components.count; i++) {
+        if (i == 0) {
+            [output appendString:components[i]];
+        } else {
+            [output appendString:[components[i] capitalizedString]];
+        }
+    }
+
+    return [NSString stringWithString:output];
+}
+
 - (NSArray *)pascalCasePropertyNames {
     NSMutableArray *props = [NSMutableArray array];
     for (NSString *prop in [self propertyNames]) {
         NSString *capped = [self pascalCasePropertyName:prop];
+        [props addObject:capped];
+    }
+    return props;
+}
+
+- (NSArray *)underscoredPropertyNames {
+    NSMutableArray *props = [NSMutableArray array];
+    for (NSString *prop in [self propertyNames]) {
+        NSString *capped = [self underscoredPropertyName:prop];
         [props addObject:capped];
     }
     return props;
@@ -171,6 +199,19 @@
     return mapping;
 }
 
+- (RKObjectMapping *)remoteMappingWithSimpleUnderscoredProperties {
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:self.class];
+    [mapping addAttributeMappingsFromDictionary:[self underscoredToPropertiesDictionary]];
+    return mapping;
+}
+
+- (RKObjectMapping *)remoteMappingWithSimpleUnderscoredPropertiesExcluding:(NSArray *)props {
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:self.class];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:[self underscoredToPropertiesDictionary]];
+    [dict removeObjectsForKeys:props];
+    [mapping addAttributeMappingsFromDictionary:dict];
+    return mapping;
+}
 
 
 - (RKObjectMapping *)remoteMappingWithSimplePropertiesExcluding:(NSArray *) props {

@@ -18,6 +18,7 @@
 
 
 #import <RestKit/Network/RKObjectRequestOperation.h>
+#import <RestKit/ObjectMapping/RKMappingResult.h>
 #import "NSObject+FDAPIOperations.h"
 #import "FDRequestCallback.h"
 #import "FDRKRequestMappingProvider.h"
