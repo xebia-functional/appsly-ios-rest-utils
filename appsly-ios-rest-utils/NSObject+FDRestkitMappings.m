@@ -73,6 +73,21 @@
     return props;
 }
 
+- (RKObjectMapping *)remoteMappingWithSimpleUnderscoredPropertiesAndRelationships:(NSDictionary *)r {
+    RKObjectMapping *mapping = [RKObjectMapping mappingForClass:self.class];
+    NSMutableArray *props = [NSMutableArray arrayWithArray:[self underscoredPropertyNames]];
+    // Remove the relationships from the mapping
+    [props removeObjectsInArray:[r allKeys]];
+    [mapping addAttributeMappingsFromArray:props];
+    if (r != nil) {
+        for (id key in [r allKeys]) {
+            RKObjectMapping *relMapping = [[[NSClassFromString([r objectForKey:key]) alloc] init] remoteMapping];
+            [mapping addRelationshipMappingWithSourceKeyPath:key mapping:relMapping];
+        }
+    }
+    return mapping;
+}
+
 - (NSArray *)propertyNames {
     unsigned int i, count = 0;
     objc_property_t *properties = class_copyPropertyList(self.class, &count);
@@ -257,6 +272,7 @@
     }
     return mapping;
 }
+
 
 
 
