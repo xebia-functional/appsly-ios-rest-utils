@@ -157,6 +157,7 @@
     response.entity = isList ? mappingResult.array : mappingResult.firstObject;
     response.status = [NSNumber numberWithInteger:operation.HTTPRequestOperation.response.statusCode];
     response.headers = operation.HTTPRequestOperation.response.allHeaderFields;
+    response.body = [[NSString alloc] initWithData:operation.HTTPRequestOperation.responseData encoding:NSUTF8StringEncoding];
     response.json = operation.mappingResult.dictionary;
     if (response.entity != nil) {
         APPCacheService *cacheService = [APPCacheService instance];
@@ -177,6 +178,7 @@
     response.status = [NSNumber numberWithInteger:operation.HTTPRequestOperation.response.statusCode];
     response.headers = operation.HTTPRequestOperation.response.allHeaderFields;
     response.json = operation.mappingResult.dictionary;
+    response.body = [[NSString alloc] initWithData:operation.HTTPRequestOperation.responseData encoding:NSUTF8StringEncoding];
     response.error = failure;
     APPCacheService *cacheService = nil;
     APPCacheContainer *cacheContainer = nil;

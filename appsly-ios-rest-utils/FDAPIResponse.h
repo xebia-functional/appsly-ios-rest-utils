@@ -27,6 +27,7 @@
 @property(nonatomic) BOOL hasEntity;
 @property(nonatomic, strong) id entity;
 @property(nonatomic) BOOL hasError;
+@property(nonatomic, strong) id body;
 @property(nonatomic, strong) id json;
 @property(nonatomic, strong) NSError *error;
 @property(nonatomic, readonly) BOOL success;

@@ -249,6 +249,7 @@
     return mapping;
 }
 
+
 - (RKObjectMapping *)remoteMappingExcludingProperties:(NSArray *) excluded {
     RKObjectMapping *mapping = [RKObjectMapping mappingForClass:self.class];
     NSMutableArray *props = [NSMutableArray arrayWithArray:[self propertyNames]];
