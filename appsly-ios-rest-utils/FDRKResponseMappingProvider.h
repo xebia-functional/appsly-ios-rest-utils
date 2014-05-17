@@ -25,4 +25,8 @@
 
 - (RKObjectMapping *)remoteMapping;
 
+@optional
+
+- (void) afterRemotePropertiesLoaded;
+
 @end
