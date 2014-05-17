@@ -170,6 +170,9 @@
                 break;
         }
     }
+    if ([response.entity respondsToSelector:@selector(afterRemotePropertiesLoaded)]) {
+        [response.entity performSelector:@selector(afterRemotePropertiesLoaded)];
+    }
     callback.result(response);
 }
 
