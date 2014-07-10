@@ -20,7 +20,7 @@
 #import "APPCacheContainer.h"
 
 #define kCacheExtension @".cache.plist"
-#define kAppAppCacheDataFile [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"] stringByAppendingPathComponent:kCacheExtension]
+#define kAppAppCacheDataFile [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"] stringByAppendingString:kCacheExtension]
 
 @interface APPPersistentCacheManager ()
 @property(nonatomic, strong) NSMutableDictionary *cache;
