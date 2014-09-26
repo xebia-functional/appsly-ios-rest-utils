@@ -117,7 +117,7 @@
         callback.cacheConfig.key = callback.cacheConfig.key != nil ? callback.cacheConfig.key : [cacheService keyWithConfig:callback.cacheConfig forArgs:args];
         APPCacheContainer *cacheContainer = [cacheService cacheWithConfig:callback.cacheConfig forKey:callback.cacheConfig.key];
         if (cacheContainer.value) {
-            NSLog(@"CACHE: Returning Cached Result -> %@", cacheContainer.value);
+//            NSLog(@"CACHE: Returning Cached Result -> %@", cacheContainer.value);
             [FDRKUtils handleSuccessForOperationWithCachedResult:cacheContainer.value onCallback:callback retryOp:operation];
         } else {
             operation();
@@ -128,8 +128,7 @@
 }
 
 - (void)handleSuccessForOperationWithCachedResult:(id)result onCallback:(FDRequestCallback *)callback retryOp:(void (^)())op {
-
-    //TODO: THIS NEVER CALLS A SECOND TIME TO REFRESH THE CACHED VERSION
+    callback.executions = [NSNumber numberWithInt:[callback.executions intValue] + 1];
     FDAPIResponse *response = [[FDAPIResponse alloc] init];
     response.entity = result;
     response.status = @200;
