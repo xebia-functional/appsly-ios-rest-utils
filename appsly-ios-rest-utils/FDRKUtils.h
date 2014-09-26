@@ -18,8 +18,12 @@
 
 
 #import <Foundation/Foundation.h>
+#import "RKHTTPUtilities.h"
 
 @class FDRequestCallback;
+@class RKObjectManager;
+@class RKObjectRequestOperation;
+@class RKMappingResult;
 
 
 @interface FDRKUtils : NSObject
@@ -35,6 +39,8 @@
 + (void)request:(RKRequestMethod)method object:(id)object responseMapping:(RKObjectMapping *)mapping path:(NSString *)path manager:(RKObjectManager *)manager success:(void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure;
 
 + (void)request:(RKRequestMethod)method responseType:(Class)responseType data:(NSData *)data name:(NSString *)name fileName:(NSString *)fileName mimeType:(NSString *)mimeType path:(NSString *)path manager:(RKObjectManager *)manager success:(void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure;
+
++ (void)request:(RKRequestMethod)method responseType:(Class)responseType data:(NSData *)data name:(NSString *)name fileName:(NSString *)fileName mimeType:(NSString *)mimeType formFields:(NSDictionary *)formFields path:(NSString *)path manager:(RKObjectManager *)manager success:(void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure;
 
 + (NSDictionary *)serializeRequest:(id)request withMapping:(RKObjectMapping *)requestMapping forMethod:(RKRequestMethod)method;
 @end

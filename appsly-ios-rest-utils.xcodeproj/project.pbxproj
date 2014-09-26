@@ -32,6 +32,7 @@
 		1B50AC7B8BB48868105D3865 /* APPEphemeralCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B50A18C40A57FF076EDC5EF /* APPEphemeralCacheManager.m */; };
 		1B50ACBDFF10E73E78F42195 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B50A0650248F6735344A638 /* Images.xcassets */; };
 		1B50ADD5EF0EC98B96FE0BFB /* FDAPIResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B50A83E2698330C4AA5C2DB /* FDAPIResponse.m */; };
+		3F62D30304454E9198CD248C /* libPods-appsly-ios-rest-utilsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF79A27067F4F1F98842974 /* libPods-appsly-ios-rest-utilsTests.a */; };
 		97F5B689191BDD0B00221B18 /* libPods-appsly-ios-rest-utilsTests-Kiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F5B688191BDD0B00221B18 /* libPods-appsly-ios-rest-utilsTests-Kiwi.a */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +118,7 @@
 				1B50A50FC61407ABE210D8CD /* XCTest.framework in Frameworks */,
 				1B50A5C204F1BB1510AAE2B6 /* Foundation.framework in Frameworks */,
 				1B50A9ED09CD557A29245385 /* UIKit.framework in Frameworks */,
+				3F62D30304454E9198CD248C /* libPods-appsly-ios-rest-utilsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +293,8 @@
 			mainGroup = 1B50AA15667B5C8BF424CEC9;
 			productRefGroup = 1B50A0D92A49CEA32713F5F1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+			);
 			projectRoot = "";
 			targets = (
 				1B50A24BFFCA528086561DFE /* appsly-ios-rest-utils */,

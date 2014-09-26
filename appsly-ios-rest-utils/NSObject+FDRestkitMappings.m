@@ -99,8 +99,15 @@
 
     NSMutableArray *list = [NSMutableArray array];
 
-    for (i = 0; i < count; i++)
-        [list addObject:[NSString stringWithUTF8String:property_getName(properties[i])]];
+    for (i = 0; i < count; i++) {
+        NSString *propertyName = [NSString stringWithUTF8String:property_getName(properties[i])];
+
+        /* Skip added runtime properties */
+        if ([@[@"description",@"debugDescription",@"superclass", @"hash"] containsObject:propertyName])
+            continue;
+
+        [list addObject:propertyName];
+    }
 
     return ([list copy]);
 }

@@ -24,6 +24,10 @@
 #import <RestKit/Network/RKObjectManager.h>
 #import "FDRKUtils.h"
 #import "FDRKResponseMappingProvider.h"
+#import "NSObject+FDAPIOperations.h"
+#import "RKObjectManager.h"
+#import "RKObjectRequestOperation.h"
+#import "RKMappingResult.h"
 
 
 @interface FDRKUtils ()
@@ -146,6 +150,36 @@ responseType:(Class)responseType
     [operation setCompletionBlockWithSuccess:success failure:failure];
     [manager enqueueObjectRequestOperation:operation];
 }
+
++ (void) request:(RKRequestMethod)method
+    responseType:(Class)responseType
+            data:(NSData *)data
+            name:(NSString *)name
+        fileName:(NSString *)fileName
+        mimeType:(NSString *)mimeType
+        formFields:(NSDictionary *)formFields
+            path:(NSString *)path
+         manager:(RKObjectManager *)manager
+         success:(void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
+         failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure {
+    NSMutableURLRequest *urlRequest = [manager multipartFormRequestWithObject:@{} method:method path:path parameters:nil constructingBodyWithBlock:^(id <AFMultipartFormData> formData) {
+        [formData appendPartWithFileData:data
+                                    name:name
+                                fileName:fileName
+                                mimeType:mimeType];
+
+
+        for (NSString *key in [formFields allKeys]) {
+            [formData appendPartWithFormData:[formFields objectForKey:key] name:key];
+        }
+    }];
+    RKObjectMapping *mapping = [FDRKUtils responseMappingForObject:[[responseType alloc] init]];
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:mapping method:method pathPattern:nil keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:urlRequest responseDescriptors:@[responseDescriptor]];
+    [operation setCompletionBlockWithSuccess:success failure:failure];
+    [manager enqueueObjectRequestOperation:operation];
+}
+
 
 + (NSDictionary *)serializeRequest:(id)request withMapping:(RKObjectMapping *)requestMapping forMethod:(RKRequestMethod)method {
     RKRequestDescriptor *requestDescriptor = [RKRequestDescriptor requestDescriptorWithMapping:requestMapping objectClass:requestMapping.objectClass rootKeyPath:nil method:method];
