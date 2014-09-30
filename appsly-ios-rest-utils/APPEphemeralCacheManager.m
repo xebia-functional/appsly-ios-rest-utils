@@ -81,7 +81,6 @@
         result = container;
     } else {
         [self remove:key];
-        NSLog(@"APPSLY CACHE EXPIRED -> [%@, %@]", key, container.value);
     }
     return result;
 }
