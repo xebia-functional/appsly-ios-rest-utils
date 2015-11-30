@@ -1,4 +1,9 @@
 [![Build Status](https://clinker.47deg.com/desktop/plugin/public/status/appsly-ios-rest-utils.png?branch=master)](https://clinker.47deg.com/jenkins/view/Appsly/job/appsly-ios-rest-utils/)
+
+THIS PROJECT IS DISCONTINUED — USE AT YOUR OWN RISK
+
+It has been a fun and great project but it's time for us to move on. Check out our recent work that we are doing with Scala on Android. http://47deg.github.io/translate-bubble-android/ and follow us on Github and Twitter for new and exciting open source projects. Thanks for your continuing support. If you wish to take on maintenance of this library please contact us through the issue tracker.
+
 # Appsly iOS REST Utils
 
 iOS Utils library over RestKit
